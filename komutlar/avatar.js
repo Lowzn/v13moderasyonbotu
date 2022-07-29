@@ -9,7 +9,9 @@ exports.run = async (client, message, args) => {
   .setImage(message.author.displayAvatarURL({ dynamic: true, size: 4096, format: 'png' }))
   .setColor('GOLD');
 
-  const button = new MessageButton()
+  const row = new MessageActionRow()
+  .addComponents(
+  new MessageButton()
   .setLabel('Avatar URL')
   .setStyle('url')
   .setURL(message.author.displayAvatarURL({ dynamic: true, size: 4096, format: 'png' }));

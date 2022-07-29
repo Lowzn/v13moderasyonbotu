@@ -3,7 +3,7 @@ const fs = require("fs");
 const config = require("./config.json");
 const prefix = config.prefix;
 
-require('discord-buttons')(client);
+
 const token = "token gir!"
 const client = new Client({
   messageCacheLifetime: 60,

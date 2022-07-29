@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const { MessageButton } = require('discord-buttons');
+const { MessageButton } = require('discord.js');
 
 exports.run = async (client, message, args) => {
 
@@ -14,7 +14,7 @@ exports.run = async (client, message, args) => {
   .setStyle('url')
   .setURL(message.author.displayAvatarURL({ dynamic: true, size: 4096, format: 'png' }));
 
-  return message.channel.send({ embed: embed, component: button });
+  return message.channel.send({ embeds: [embed], component: [button] });
 
 };
 exports.config = {
